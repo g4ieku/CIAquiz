@@ -32,18 +32,6 @@ form.addEventListener("submit", (event) => {
 
    let percentScore = Math.round((counter[maxKey] * 100) / 6, 0);
 
-   toggle();
-
-   let output = 0;
-   const timer = setInterval(() => {
-      percentage.textContent = `${output}%`;
-      if (output === percentScore) {
-         clearInterval(timer);
-      } else {
-         output++;
-      }
-   }, 20);
-
    switch (maxKey) {
       case "A":
          result.textContent = "RISKY GAMBLER";
@@ -70,6 +58,18 @@ form.addEventListener("submit", (event) => {
          resultImg.src = "./images/F.png";
          break;
    }
+
+   toggle();
+
+   let output = 0;
+   const timer = setInterval(() => {
+      percentage.textContent = `${output}%`;
+      if (output === percentScore) {
+         clearInterval(timer);
+      } else {
+         output++;
+      }
+   }, 20);
 });
 
 const toggle = () => {
