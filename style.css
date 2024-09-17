@@ -1,0 +1,401 @@
+/* ===== VARIABLES ===== */
+:root {
+   --text-color: #333;
+   --white-color: #fff;
+   --secondary-color: #0093e9;
+   --black-color: #13131a;
+   --bg: #010103;
+   --heineken-color: #008200;
+   --heineken-corporate-green: #205527;
+   --heineken-red: #ff2b00;
+   --heineken-silver: #c3c3c3;
+   --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== GENERAL STYLE ===== */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   transition: 0.2s linear;
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+   width: 1rem;
+   background: hsl(228, 4%, 15%);
+}
+html::-webkit-scrollbar-track {
+   background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+   background: hsl(228, 4%, 33%);
+   border-radius: 0.1rem;
+}
+html::-webkit-scrollbar-thumb:hover {
+   background: hsl(228, 4%, 60%);
+}
+
+body {
+   font-family: "Poppins", sans-serif;
+   background-color: var(--heineken-corporate-green);
+   background-image: linear-gradient(
+      160deg,
+      var(--heineken-corporate-green) 0%,
+      var(--heineken-color) 100%
+   );
+}
+
+/* ===== CONTAINER ===== */
+.container {
+   max-width: 900px;
+   margin: 0 auto;
+   padding: 2.5rem 2rem;
+}
+
+.container .title {
+   font-size: 4.5rem;
+   line-height: 1.1;
+   text-align: center;
+   color: var(--white-color);
+   text-transform: uppercase;
+   margin-bottom: 2rem;
+   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.quiz_form {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2rem;
+}
+
+/* ===== BOXES ===== */
+.quiz_form .box {
+   background: var(--heineken-silver);
+   padding: 1rem 2rem;
+   border-radius: 0.5rem;
+   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+   position: relative;
+}
+
+.quiz_form .box p {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   font-size: 1.2rem;
+   font-weight: 500;
+   color: var(--text-color);
+}
+
+.quiz_form .box i {
+   width: 100%;
+   text-align: center;
+}
+
+.quiz_form .box h3 {
+   font-size: 2rem;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.quiz_form .box label {
+   font-size: 1.6rem;
+   line-height: 1.2;
+   padding: 0.75rem 0;
+
+   font-weight: 500;
+   cursor: pointer;
+   position: relative;
+}
+
+.quiz_form .box label img {
+   max-width: 40px;
+   position: absolute;
+   left: -17px;
+   top: -5px;
+   border-radius: 50%;
+   outline: 1px solid var(--heineken-silver);
+}
+
+.quiz_form .box label:hover {
+   background: var(--white-color);
+   outline: 0.1rem solid var(--black-color);
+   transform: scale(1.05) rotate(-0.5deg);
+   transition: all 0.2s linear;
+}
+
+.quiz_form .box label:hover img {
+   transform: rotate(5deg) scale(1.1);
+   transition: all 0.2s linear;
+   border-radius: 0%;
+   outline: none;
+   z-index: 1000;
+}
+
+.quiz_form .btn {
+   width: 100%;
+   background: var(--white-color);
+   text-align: center;
+   font-size: 2rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   padding: 1.5rem 5rem;
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+   cursor: pointer;
+}
+
+.quiz_form .btn:hover {
+   box-shadow: none;
+   transition: all 0.4s ease-in-out;
+}
+
+.quiz_form .btn:active {
+   transform: scale(0.95);
+}
+
+/* FOOTER */
+.footer {
+   background: var(--black-color);
+   width: 100%;
+   padding: 1rem 0;
+   text-align: center;
+}
+
+.footer .credit {
+   font-size: 1.1rem;
+   color: var(--white-color);
+   font-weight: 400;
+   padding: 1rem;
+}
+
+.footer .credit span {
+   font-weight: 400;
+}
+
+/* ===== RADIO BTN STYLE ===== */
+label {
+   display: block;
+   line-height: 3rem;
+}
+
+.option-input {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   -o-appearance: none;
+   appearance: none;
+   position: relative;
+   top: 5.33333px;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   height: 25px;
+   width: 25px;
+   transition: all 0.15s ease-out 0s;
+   background: #cbd1d8;
+   border: none;
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+   margin-right: 0.2rem;
+   outline: none;
+   position: relative;
+   z-index: 1000;
+}
+.option-input:hover {
+   background: #9faab7;
+}
+.option-input:checked {
+   background: var(--heineken-color);
+}
+.option-input:checked::before {
+   width: 25px;
+   height: 25px;
+   display: flex;
+   content: "\f00c";
+   font-size: 20px;
+   font-weight: bold;
+   position: absolute;
+   align-items: center;
+   justify-content: center;
+   font-family: "Font Awesome 5 Free";
+}
+.option-input:checked::after {
+   -webkit-animation: click-wave 0.65s;
+   -moz-animation: click-wave 0.65s;
+   animation: click-wave 0.65s;
+   background: #40e0d0;
+   content: "";
+   display: block;
+   position: relative;
+   z-index: 100;
+}
+.option-input.radio {
+   border-radius: 50%;
+}
+.option-input.radio::after {
+   border-radius: 50%;
+}
+
+@keyframes click-wave {
+   0% {
+      height: 25px;
+      width: 25px;
+      opacity: 0.35;
+      position: relative;
+   }
+   100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+   }
+}
+
+/* ===== ANIMATION ===== */
+/* Animation */
+.text-glow {
+   color: var(--white-color);
+   animation: flicker 5s infinite alternate;
+}
+/* Flickering animation */
+@keyframes flicker {
+   0%,
+   18%,
+   22%,
+   25%,
+   53%,
+   57%,
+   100% {
+      text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+         0 0 25px var(--heineken-color), 0 0 35px var(--heineken-color),
+         0 0 45px var(--heineken-color), 0 0 55px var(--heineken-color),
+         0 0 80px var(--heineken-color);
+   }
+
+   20%,
+   24%,
+   55% {
+      text-shadow: none;
+   }
+}
+
+/* ===== POPUP WINDOW ===== */
+.popup-container {
+   position: fixed;
+   top: 0;
+   left: -120%;
+   z-index: 1000;
+   background: rgba(0, 0, 0, 0.7);
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.popup-container.toggle {
+   left: 0%;
+}
+
+.popup-container .popup {
+   max-width: 500px;
+   width: 100%;
+   background: #fff;
+   padding: 2rem 0.5rem 1rem;
+   border-radius: 2px;
+   text-align: center;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+   position: relative;
+}
+
+.popup-container .popup h3 {
+   font-size: 2.5rem;
+}
+
+.popup-container .popup h2 {
+   padding: 0.5rem 2rem;
+   font-size: 3rem;
+   color: var(--heineken-color);
+}
+
+.popup-container .popup img {
+   max-width: 100%;
+   object-fit: cover;
+}
+
+.popup-container .popup #close {
+   position: absolute;
+   top: -15px;
+   right: -15px;
+   border-radius: 50%;
+   border: 2px solid var(--heineken-corporate-green);
+   background: var(--heineken-silver);
+   height: 40px;
+   width: 40px;
+   line-height: 35px;
+   cursor: pointer;
+   font-size: 20px;
+}
+
+.popup-container .popup #close:hover {
+   transform: rotate(180deg);
+}
+
+.popup-container .popup button {
+   border: 0;
+   outline: 0;
+   padding: 1rem;
+   font-size: 2rem;
+   font-weight: 500;
+   color: var(--white-color);
+   background: var(--heineken-corporate-green);
+   box-shadow: 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+   border-radius: 0.5rem;
+   cursor: pointer;
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+}
+
+.popup-container .popup button:hover {
+   letter-spacing: 1px;
+   box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 991px) {
+   html {
+      font-size: 55%;
+   }
+
+   .container .title {
+      font-size: 3rem;
+   }
+   .quiz_form .box label:hover img {
+      transform: rotate(5deg) scale(1);
+      border-radius: 50%;
+   }
+
+   .popup-container .popup #close {
+      top: -2px;
+      right: -2px;
+   }
+}
+
+@media (max-width: 450px) {
+   html {
+      font-size: 50%;
+   }
+}
