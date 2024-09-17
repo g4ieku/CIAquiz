@@ -69,7 +69,7 @@ form.addEventListener("submit", (event) => {
       } else {
          output++;
       }
-   }, 20);
+   }, 30);
 });
 
 const toggle = () => {
