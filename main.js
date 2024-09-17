@@ -76,3 +76,12 @@ const toggle = () => {
    let toggle = document.querySelector(".popup-container");
    toggle.classList.toggle("toggle");
 };
+
+const removeAnswers = () => {
+   document.body.scrollTop = 0;
+   document.documentElement.scrollTop = 0;
+
+   setInterval(() => {
+      location.reload();
+   }, 1000);
+};
