@@ -81,11 +81,22 @@ body {
 
 /* ===== BOXES ===== */
 .quiz_form .box {
-   background: var(--heineken-silver);
+   background: var(--white-color);
    padding: 1rem 2rem;
    border-radius: 0.5rem;
    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
    position: relative;
+}
+
+.quiz_form .box:hover {
+   outline: 0.2rem solid var(--black-color);
+   transition: all 0.3s ease-in-out;
+   box-shadow: none;
+}
+
+.quiz_form .box:hover i {
+   transform: rotate(20deg);
+   transition: all 0.3s linear;
 }
 
 .quiz_form .box p {
@@ -109,7 +120,7 @@ body {
 }
 
 .quiz_form .box label {
-   font-size: 1.6rem;
+   font-size: 1.7rem;
    line-height: 1.2;
    padding: 0.75rem 0;
 
@@ -130,7 +141,7 @@ body {
 }
 
 .quiz_form .box label:hover {
-   background: var(--white-color);
+   background: var(--heineken-silver);
    outline: 0.1rem solid var(--black-color);
    transform: scale(1.05) rotate(-0.5deg);
    transition: all 0.2s linear;
@@ -278,6 +289,13 @@ label {
    color: var(--white-color);
    animation: flicker 5s infinite alternate;
 }
+
+@keyframes image {
+   0% {
+      transform: rotate(360deg);
+   }
+}
+
 /* Flickering animation */
 @keyframes flicker {
    0%,

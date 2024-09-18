@@ -50,7 +50,7 @@ form.addEventListener("submit", (event) => {
          resultImg.src = "./images/D.png";
          break;
       case "E":
-         result.textContent = "RISKY GAMBLER";
+         result.textContent = "DATA ANALYST";
          resultImg.src = "./images/E.png";
          break;
       case "F":
