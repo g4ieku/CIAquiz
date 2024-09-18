@@ -2,6 +2,7 @@
 :root {
    --text-color: #333;
    --white-color: #fff;
+   --light-white-color: #fcfefe;
    --secondary-color: #0093e9;
    --black-color: #13131a;
    --bg: #010103;
@@ -81,7 +82,7 @@ body {
 
 /* ===== BOXES ===== */
 .quiz_form .box {
-   background: var(--white-color);
+   background: var(--light-white-color);
    padding: 1rem 2rem;
    border-radius: 0.5rem;
    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
