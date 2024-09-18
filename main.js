@@ -86,4 +86,4 @@ const removeAnswers = () => {
    }, 1000);
 };
 
-document.getElementById("box6").scrollIntoView();
+// document.getElementById("box6").scrollIntoView();
