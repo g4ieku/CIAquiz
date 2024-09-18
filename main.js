@@ -85,3 +85,5 @@ const removeAnswers = () => {
       location.reload();
    }, 1000);
 };
+
+document.getElementById("box6").scrollIntoView();
