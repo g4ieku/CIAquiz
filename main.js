@@ -2,6 +2,60 @@ const form = document.querySelector(".quiz_form");
 let result = document.querySelector(".result");
 let resultImg = document.querySelector(".popup img");
 let percentage = document.querySelector(".percentage");
+const box1Lbl = document.querySelectorAll("#box1 input");
+const box2Lbl = document.querySelectorAll("#box2 input");
+const box3Lbl = document.querySelectorAll("#box3 input");
+const box4Lbl = document.querySelectorAll("#box4 input");
+const box5Lbl = document.querySelectorAll("#box5 input");
+const box6Lbl = document.querySelectorAll("#box6 input");
+
+box1Lbl.forEach((input) => {
+   input.addEventListener("click", function () {
+      // console.log("aaa");
+      document.getElementById("box2").style.display = "block";
+      document.getElementById("box2").scrollIntoView();
+   });
+});
+
+box2Lbl.forEach((input) => {
+   input.addEventListener("click", function () {
+      // console.log("aaa");
+      document.getElementById("box3").style.display = "block";
+      document.getElementById("box3").scrollIntoView();
+   });
+});
+
+box3Lbl.forEach((input) => {
+   input.addEventListener("click", function () {
+      // console.log("aaa");
+      document.getElementById("box4").style.display = "block";
+      document.getElementById("box4").scrollIntoView();
+   });
+});
+
+box4Lbl.forEach((input) => {
+   input.addEventListener("click", function () {
+      // console.log("aaa");
+      document.getElementById("box5").style.display = "block";
+      document.getElementById("box5").scrollIntoView();
+   });
+});
+
+box5Lbl.forEach((input) => {
+   input.addEventListener("click", function () {
+      // console.log("aaa");
+      document.getElementById("box6").style.display = "block";
+      document.getElementById("box6").scrollIntoView();
+   });
+});
+
+box6Lbl.forEach((input) => {
+   input.addEventListener("click", function () {
+      // console.log("aaa");
+      document.getElementById("submit").style.display = "block";
+      document.querySelector(".quiz_form #submit").scrollIntoView();
+   });
+});
 
 form.addEventListener("submit", (event) => {
    event.preventDefault();
@@ -86,6 +140,7 @@ form.addEventListener("submit", (event) => {
 const toggle = () => {
    let toggle = document.querySelector(".popup-container");
    toggle.classList.toggle("toggle");
+   document.querySelector("button.btn_reset").style.display = "block";
 };
 
 const removeAnswers = () => {
@@ -96,5 +151,3 @@ const removeAnswers = () => {
       location.reload();
    }, 1000);
 };
-
-// document.getElementById("box6").scrollIntoView();

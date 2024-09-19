@@ -57,6 +57,7 @@ body {
 
 /* ===== CONTAINER ===== */
 .container {
+   min-height: 100vh;
    max-width: 900px;
    margin: 0 auto;
    padding: 2.5rem 2rem;
@@ -105,6 +106,35 @@ body {
    border-radius: 0.5rem;
    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
    position: relative;
+}
+
+/* HIDEN BOXES ! */
+.quiz_form #box2 {
+   display: none;
+}
+
+.quiz_form #box3 {
+   display: none;
+}
+
+.quiz_form #box4 {
+   display: none;
+}
+
+.quiz_form #box5 {
+   display: none;
+}
+
+.quiz_form #box6 {
+   display: none;
+}
+
+.quiz_form #submit {
+   display: none;
+}
+
+button.btn_reset {
+   display: none;
 }
 
 .quiz_form .box:hover {
