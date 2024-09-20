@@ -2,6 +2,8 @@ const form = document.querySelector(".quiz_form");
 let result = document.querySelector(".result");
 let resultImg = document.querySelector(".popup img");
 let percentage = document.querySelector(".percentage");
+
+// Buttons events
 const box1Lbl = document.querySelectorAll("#box1 input");
 const box2Lbl = document.querySelectorAll("#box2 input");
 const box3Lbl = document.querySelectorAll("#box3 input");
@@ -11,7 +13,6 @@ const box6Lbl = document.querySelectorAll("#box6 input");
 
 box1Lbl.forEach((input) => {
    input.addEventListener("click", function () {
-      // console.log("aaa");
       document.getElementById("box2").style.display = "block";
       document.getElementById("box2").scrollIntoView();
    });
@@ -19,7 +20,6 @@ box1Lbl.forEach((input) => {
 
 box2Lbl.forEach((input) => {
    input.addEventListener("click", function () {
-      // console.log("aaa");
       document.getElementById("box3").style.display = "block";
       document.getElementById("box3").scrollIntoView();
    });
@@ -27,7 +27,6 @@ box2Lbl.forEach((input) => {
 
 box3Lbl.forEach((input) => {
    input.addEventListener("click", function () {
-      // console.log("aaa");
       document.getElementById("box4").style.display = "block";
       document.getElementById("box4").scrollIntoView();
    });
@@ -35,7 +34,6 @@ box3Lbl.forEach((input) => {
 
 box4Lbl.forEach((input) => {
    input.addEventListener("click", function () {
-      // console.log("aaa");
       document.getElementById("box5").style.display = "block";
       document.getElementById("box5").scrollIntoView();
    });
@@ -43,7 +41,6 @@ box4Lbl.forEach((input) => {
 
 box5Lbl.forEach((input) => {
    input.addEventListener("click", function () {
-      // console.log("aaa");
       document.getElementById("box6").style.display = "block";
       document.getElementById("box6").scrollIntoView();
    });
@@ -51,7 +48,6 @@ box5Lbl.forEach((input) => {
 
 box6Lbl.forEach((input) => {
    input.addEventListener("click", function () {
-      // console.log("aaa");
       document.getElementById("submit").style.display = "block";
       document.querySelector(".quiz_form #submit").scrollIntoView();
    });
@@ -133,7 +129,7 @@ form.addEventListener("submit", (event) => {
          } else {
             output++;
          }
-      }, 30);
+      }, 15);
    }
 });
 
